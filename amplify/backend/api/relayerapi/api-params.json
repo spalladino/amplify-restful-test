@@ -1,8 +1,8 @@
 {
     "paths": [
         {
-            "name": "/relayer/{id}",
-            "lambdaFunction": "relayerrestfulapilambdas",
+            "name": "/relayer",
+            "lambdaFunction": "relayercrud",
             "privacy": {
                 "private": true,
                 "auth": [
@@ -15,11 +15,11 @@
             }
         }
     ],
-    "resourceName": "relayerrestfulapi",
-    "apiName": "relayerrestfulapi",
+    "resourceName": "relayerapi",
+    "apiName": "relayerapi",
     "functionArns": [
         {
-            "lambdaFunction": "relayerrestfulapilambdas"
+            "lambdaFunction": "relayercrud"
         }
     ],
     "privacy": {
@@ -31,7 +31,7 @@
     "dependsOn": [
         {
             "category": "function",
-            "resourceName": "relayerrestfulapilambdas",
+            "resourceName": "relayercrud",
             "attributes": [
                 "Name",
                 "Arn"

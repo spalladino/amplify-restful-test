@@ -11,7 +11,7 @@
 			"providerPlugin": "awscloudformation",
 			"service": "Lambda"
 		},
-		"relayerrestfulapilambdas": {
+		"relayercrud": {
 			"build": true,
 			"providerPlugin": "awscloudformation",
 			"service": "Lambda",
@@ -56,13 +56,13 @@
 		}
 	},
 	"api": {
-		"relayerrestfulapi": {
+		"relayerapi": {
 			"service": "API Gateway",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [
 				{
 					"category": "function",
-					"resourceName": "relayerrestfulapilambdas",
+					"resourceName": "relayercrud",
 					"attributes": [
 						"Name",
 						"Arn"

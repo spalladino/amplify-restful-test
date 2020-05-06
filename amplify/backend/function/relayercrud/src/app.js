@@ -32,7 +32,7 @@ const partitionKeyType = "S";
 const sortKeyName = "relayerId";
 const sortKeyType = "S";
 const hasSortKey = sortKeyName !== "";
-const path = "/relayer/:id";
+const path = "/relayer";
 const UNAUTH = 'UNAUTH';
 const hashKeyPath = '/:' + partitionKeyName;
 const sortKeyPath = hasSortKey ? '/:' + sortKeyName : '';
