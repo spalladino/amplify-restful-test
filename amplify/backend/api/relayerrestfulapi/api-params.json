@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/relayer/{id}",
+            "lambdaFunction": "relayerrestfulapilambdas",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "relayerrestfulapi",
+    "apiName": "relayerrestfulapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "relayerrestfulapilambdas"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-amplifyrestfultest-dev-171759-authRole",
+        "unAuthRoleName": "amplify-amplifyrestfultest-dev-171759-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "relayerrestfulapilambdas",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

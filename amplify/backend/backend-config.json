@@ -1,0 +1,74 @@
+{
+	"storage": {
+		"relayertable": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"function": {
+		"cognitorestfultestPreTokenGeneration": {
+			"build": true,
+			"providerPlugin": "awscloudformation",
+			"service": "Lambda"
+		},
+		"relayerrestfulapilambdas": {
+			"build": true,
+			"providerPlugin": "awscloudformation",
+			"service": "Lambda",
+			"dependsOn": [
+				{
+					"category": "storage",
+					"resourceName": "relayertable",
+					"attributes": [
+						"Name",
+						"Arn"
+					],
+					"attributeEnvMap": {
+						"Name": "TABLE_NAME",
+						"Arn": "TABLE_ARN"
+					}
+				},
+				{
+					"category": "auth",
+					"resourceName": "cognitorestfultest",
+					"attributes": [
+						"UserPoolId"
+					]
+				}
+			]
+		}
+	},
+	"auth": {
+		"cognitorestfultest": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "cognitorestfultestPreTokenGeneration",
+					"triggerProvider": "Cognito",
+					"attributes": [
+						"Arn",
+						"Name"
+					]
+				}
+			]
+		}
+	},
+	"api": {
+		"relayerrestfulapi": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "relayerrestfulapilambdas",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
+		}
+	}
+}

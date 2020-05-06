@@ -1,0 +1,7 @@
+{
+    "tableName": "relayertable",
+    "partitionKeyName": "tenantId",
+    "partitionKeyType": "S",
+    "sortKeyName": "relayerId",
+    "sortKeyType": "S"
+}

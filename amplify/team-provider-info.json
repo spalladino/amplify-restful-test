@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-amplifyrestfultest-dev-171759-authRole",
+            "UnauthRoleArn": "arn:aws:iam::598931145132:role/amplify-amplifyrestfultest-dev-171759-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::598931145132:role/amplify-amplifyrestfultest-dev-171759-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-amplifyrestfultest-dev-171759-deployment",
+            "UnauthRoleName": "amplify-amplifyrestfultest-dev-171759-unauthRole",
+            "StackName": "amplify-amplifyrestfultest-dev-171759",
+            "StackId": "arn:aws:cloudformation:us-east-1:598931145132:stack/amplify-amplifyrestfultest-dev-171759/b04e5b80-8fd6-11ea-a777-0e09773e6f3f",
+            "AmplifyAppId": "dfm6esj8he8d4"
+        },
+        "categories": {
+            "function": {
+                "cognitorestfultestPreTokenGeneration": {}
+            },
+            "auth": {
+                "cognitorestfultest": {}
+            }
+        }
+    }
+}

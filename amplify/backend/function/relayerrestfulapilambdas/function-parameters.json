@@ -1,0 +1,12 @@
+{
+    "permissions": {
+        "auth": {
+            "cognitorestfultest": [
+                "create",
+                "read",
+                "update",
+                "delete"
+            ]
+        }
+    }
+}

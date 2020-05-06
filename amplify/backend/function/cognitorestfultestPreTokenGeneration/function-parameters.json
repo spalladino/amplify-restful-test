@@ -1,0 +1,15 @@
+{
+    "trigger": true,
+    "modules": [
+        "alter-claims"
+    ],
+    "parentResource": "cognitorestfultest",
+    "functionName": "cognitorestfultestPreTokenGeneration",
+    "resourceName": "cognitorestfultestPreTokenGeneration",
+    "parentStack": "auth",
+    "triggerEnvs": [],
+    "triggerDir": "/home/spalladino/.nvm/versions/node/v10.13.0/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/PreTokenGeneration",
+    "triggerTemplate": "PreTokenGeneration.json.ejs",
+    "roleName": "cognitorestfultestPreTokenGeneration",
+    "skipEdit": true
+}
